@@ -1,16 +1,15 @@
 <html> 
-<!--
+  <!--
 
-  ◯
-  Theme by inky.
-  Inspired by 'Minimalist', one of the default Tumblr themes.
+      ◯
+      Theme by inky.
+      Modified by Vivek Haldar <vh@vivekhaldar.com>
+      Inspired by 'Minimalist', one of the default Tumblr themes.
 
--->
+    -->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>{Title}{block:PostSummary} : {PostSummary}{/block:PostSummary}</title>
-
-    <meta name="google-site-verification" content="GMod7D6EI_piOVCjgthZE1ONHQzdyCUCZMU6uFokWTE" />
 
     <meta name="color:Background" content="#fff"/>
     <meta name="color:Text" content="#444"/>
@@ -33,9 +32,9 @@
     <link rel="me" type="text/html" href="http://www.google.com/profiles/vhaldar"/>
     
     
-<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Seaweed+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Seaweed+Script' rel='stylesheet' type='text/css'>
 
     <meta name="description" content="{MetaDescription}"/>
     <style type="text/css">
@@ -47,15 +46,15 @@
       dl, dt, dd, ol, ul, li,
       fieldset, form, label, legend,
       table, caption, tbody, tfoot, thead, tr, th, td
-          {margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit;
-           line-height: inherit; vertical-align: baseline; background: transparent;}
+      {margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit;
+      line-height: inherit; vertical-align: baseline; background: transparent;}
       html {font-size:100.01%;}
       caption, cite, code, dfn, th, var {font-style: normal; font-weight: normal;}
       h1, h2, h3, h4, h5, h6 {font-weight: normal; font-family: 'Ovo', serif;}
 
 
       h1 {
-            font-family: 'Seaweed Script', Georgia, Times, serif;
+      font-family: 'Seaweed Script', Georgia, Times, serif;
       }
       
       blockquote, q {quotes: none;}
@@ -76,11 +75,11 @@
       h1 a {color: {color:Text}; padding: 0 0.25em; font-weight: bold; text-decoration: none}
 
       h2, h3 {
-          font-family: 'Arvo', Helvetica, Arial, sans-serif;
-          line-height: 18pt;}
+      font-family: 'Arvo', Helvetica, Arial, sans-serif;
+      line-height: 18pt;}
       p, pre, ul, ol, blockquote, form {
-          font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-          margin: 9pt 0 9pt; line-height: 18pt;}
+      font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+      margin: 9pt 0 9pt; line-height: 18pt;}
       blockquote {padding-left: 1em; margin-left: 2pt; border-left: 0.25em solid {color:Minor};}
       pre {overflow-x: auto; font-size: 11pt;}
       sup, sub {height: 0; line-height: 1; vertical-align: baseline; _vertical-align: bottom; position: relative;}
@@ -94,9 +93,9 @@
       #description a {color: {color:Secondary};}
       #description a:hover {color: {color:Text};}
       #description form .input
-        {background: {color:Background}; color: {color:Secondary}; font-size: 10pt;
-         text-transform: lowercase; width: 90%; border: solid {color:Minor};
-         border-width: 0 1px 1px 0;}
+      {background: {color:Background}; color: {color:Secondary}; font-size: 10pt;
+      text-transform: lowercase; width: 90%; border: solid {color:Minor};
+      border-width: 0 1px 1px 0;}
       #description .submit {height: 0; overflow: hidden; display: block;}
       #description .meta {word-spacing: 0.25em; font-size: 10pt; text-transform: uppercase;}
       #description .meta a {color: {color:Minor};}
@@ -112,7 +111,7 @@
       .post-body a:hover {color: {color:Text}; border-bottom-color: {color:Minor};}
       .post-body .image a {border-width: 0;}
       .post-body ul ul, .post-body ul ol, .post-body ol ol, .post-body ol ul,
-        .post-body blockquote ul, .post-body blockquote ol {margin-left: 1.5em;}
+      .post-body blockquote ul, .post-body blockquote ol {margin-left: 1.5em;}
 
       .permalink {font-size: 11pt; position: absolute; right: 530px; text-align: right;}
       .permalink a {color: {color:Minor}; white-space: nowrap; padding: 0 0 4.5pt 9pt;}
@@ -133,8 +132,8 @@
 
       .quote-post {position: relative; top: -4.5pt;}
       .quote-post blockquote.quote
-        {font-size: 18pt; line-height: 24pt; text-indent: -7pt;
-         margin: 0; padding: 0; border-width: 0;}
+      {font-size: 18pt; line-height: 24pt; text-indent: -7pt;
+      margin: 0; padding: 0; border-width: 0;}
       .quote-post .quote:before {content: '“';}
       .quote-post .quote:after {content: '”';}
       .quote-post .quote a {color: {color:Text};}
@@ -179,174 +178,174 @@
     <div id="body">
       <div id="content">
 
-<h1><a href="/">{Title}</a></h1>
+	<h1><a href="/">{Title}</a></h1>
 
-<div id="description">
-  <p>{Description}</p>
+	<div id="description">
+	  <p>{Description}</p>
 
-  <p class="meta">
-    <a href="/archive">Archive</a>
-    <span class="dim">/</span>
-    <a href="{RSS}">RSS</a>
-    {block:IfLinkToLikedPosts}
-      {block:Likes}
-      <br/>
-      <a href="http://www.tumblr.com/liked/by/{Name}">Stuff I Like</a>
-      {/block:Likes}
-    {/block:IfLinkToLikedPosts}
-    {block:IfLinkToTheme}
-      <br/>
-      <a href="http://www.tumblr.com/theme/1386">Use This Theme</a>
-    {/block:IfLinkToTheme}
-  </p>
+	  <p class="meta">
+	    <a href="/archive">Archive</a>
+	    <span class="dim">/</span>
+	    <a href="{RSS}">RSS</a>
+	    {block:IfLinkToLikedPosts}
+	    {block:Likes}
+	    <br/>
+	    <a href="http://www.tumblr.com/liked/by/{Name}">Stuff I Like</a>
+	    {/block:Likes}
+	    {/block:IfLinkToLikedPosts}
+	    {block:IfLinkToTheme}
+	    <br/>
+	    <a href="http://www.tumblr.com/theme/1386">Use This Theme</a>
+	    {/block:IfLinkToTheme}
+	  </p>
 
-  <p>
-    <a href="http://blog.vivekhaldar.com/about">About</a> /
-    <a href="http://blog.vivekhaldar.com/popular">Popular</a> /
-    <a href="https://twitter.com/vivekhaldar" class="twitter-follow-button" data-show-count="false">Follow @vivekhaldar</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-  </p>
-</div>
+	  <p>
+	    <a href="http://blog.vivekhaldar.com/about">About</a> /
+	    <a href="http://blog.vivekhaldar.com/popular">Popular</a> /
+	    <a href="https://twitter.com/vivekhaldar" class="twitter-follow-button" data-show-count="false">Follow @vivekhaldar</a>
+	    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+	  </p>
+	</div>
 
-<ul id="posts">
-  {block:Posts}
-  <li class="post">
+	<ul id="posts">
+	  {block:Posts}
+	  <li class="post">
 
-    <h2 class="permalink">
-          {block:NewDayDate}
-          <a title="{NoteCountWithLabel}"
-            href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
-          {/block:NewDayDate}
+	    <h2 class="permalink">
+              {block:NewDayDate}
+              <a title="{NoteCountWithLabel}"
+		 href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
+              {/block:NewDayDate}
 
-        {block:IfNotDisqusShortName}
-          {block:SameDayDate}
-          <a title="{NoteCountWithLabel}"
-            href="{Permalink}">&rarr;</a>
-          {/block:SameDayDate}
-        {/block:IfNotDisqusShortName}
+              {block:IfNotDisqusShortName}
+              {block:SameDayDate}
+              <a title="{NoteCountWithLabel}"
+		 href="{Permalink}">&rarr;</a>
+              {/block:SameDayDate}
+              {/block:IfNotDisqusShortName}
 
-        {block:IfDisqusShortname}
-          <a title="{NoteCountWithLabel}"
-            href="{Permalink}#disqus_thread"></a>
-        {/block:IfDisqusShortname}
+              {block:IfDisqusShortname}
+              <a title="{NoteCountWithLabel}"
+		 href="{Permalink}#disqus_thread"></a>
+              {/block:IfDisqusShortname}
 
-    <!-- Google Plus button -->
-	<g:plusone size='small' href='{Permalink}'></g:plusone>
+	      <!-- Google Plus button -->
+	      <g:plusone size='small' href='{Permalink}'></g:plusone>
 
-   </h2>
+	    </h2>
 
-    {block:Regular}
-    <div class="post-body text-post">
-      {block:Title}
-      <h3>{Title}</h3>
-      {/block:Title}
+	    {block:Regular}
+	    <div class="post-body text-post">
+	      {block:Title}
+	      <h3>{Title}</h3>
+	      {/block:Title}
 
-      {Body}
-    </div>
-    {/block:Regular}
+	      {Body}
+	    </div>
+	    {/block:Regular}
 
-    {block:Link}
-    <div class="post-body link-post">
-      <h3><a class="link" href="{URL}">{Name}</a></h3>
+	    {block:Link}
+	    <div class="post-body link-post">
+	      <h3><a class="link" href="{URL}">{Name}</a></h3>
 
-      {block:Description}
-      {Description}
-      {/block:Description}
-    </div>
-    {/block:Link}
+	      {block:Description}
+	      {Description}
+	      {/block:Description}
+	    </div>
+	    {/block:Link}
 
-    {block:Photo}
-    <div class="post-body image-post">
-      <div class="image">
-        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-      </div>
+	    {block:Photo}
+	    <div class="post-body image-post">
+	      <div class="image">
+		{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
+	      </div>
 
-      {block:Caption}
-      <div class="caption">{Caption}</div>
-      {/block:Caption}
-    </div>
-    {/block:Photo}
+	      {block:Caption}
+	      <div class="caption">{Caption}</div>
+	      {/block:Caption}
+	    </div>
+	    {/block:Photo}
 
-    {block:Video}
-    <div class="post-body video-post">
-      {Video-500}
+	    {block:Video}
+	    <div class="post-body video-post">
+	      {Video-500}
 
-      {block:Caption}
-      <div class="caption">{Caption}</div>
-      {/block:Caption}
-    </div>
-    {/block:Video}
+	      {block:Caption}
+	      <div class="caption">{Caption}</div>
+	      {/block:Caption}
+	    </div>
+	    {/block:Video}
 
-    {block:Audio}
-    <div class="post-body audio-post">
-      <div class="audio">{AudioPlayerBlack}</div>
+	    {block:Audio}
+	    <div class="post-body audio-post">
+	      <div class="audio">{AudioPlayerBlack}</div>
 
-      {block:Caption}
-      <div class="caption">{Caption}</div>
-      {/block:Caption}
-    </div>
-    {/block:Audio}
+	      {block:Caption}
+	      <div class="caption">{Caption}</div>
+	      {/block:Caption}
+	    </div>
+	    {/block:Audio}
 
-    {block:Quote}
-    <div class="post-body quote-post">
-      <blockquote class="quote">{Quote}</blockquote>
+	    {block:Quote}
+	    <div class="post-body quote-post">
+	      <blockquote class="quote">{Quote}</blockquote>
 
-      {block:Source}
-      <p class="cite">&mdash;&#8194;{Source}</p>
-      {/block:Source}
-    </div>
-    {/block:Quote}
+	      {block:Source}
+	      <p class="cite">&mdash;&#8194;{Source}</p>
+	      {/block:Source}
+	    </div>
+	    {/block:Quote}
 
-    {block:Conversation}
-    <div class="post-body chat-post">
-      {block:Title}
-      <h3>{Title}</h3>
-      {/block:Title}
+	    {block:Conversation}
+	    <div class="post-body chat-post">
+	      {block:Title}
+	      <h3>{Title}</h3>
+	      {/block:Title}
 
-      <ol>
-        {block:Lines}
-        <li>
-          {block:Label}<b class="label">{Label}</b>{/block:Label}
-          {Line}
-        </li>
-        {/block:Lines}
-      </ol>
-    </div>
-    {/block:Conversation}
+	      <ol>
+		{block:Lines}
+		<li>
+		  {block:Label}<b class="label">{Label}</b>{/block:Label}
+		  {Line}
+		</li>
+		{/block:Lines}
+	      </ol>
+	    </div>
+	    {/block:Conversation}
 
-    {block:IfDisqusShortname}
-    {block:Permalink}
-    
-    <p><font style="BACKGROUND-COLOR: yellow">
-    If you've read this far, please consider <a href="http://blog.vivekhaldar.com/rss">subscribing to the RSS feed</a>, or <a href="http://twitter.com/vivekhaldar">following me on Twitter.</a>
-    </font>
-    
-    
-    
-    <div id="disqus_thread"></div>
-    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-    {/block:Permalink}
-    {/block:IfDisqusShortname}
+	    {block:IfDisqusShortname}
+	    {block:Permalink}
+	    
+	    <p><font style="BACKGROUND-COLOR: yellow">
+		If you've read this far, please consider <a href="http://blog.vivekhaldar.com/rss">subscribing to the RSS feed</a>, or <a href="http://twitter.com/vivekhaldar">following me on Twitter.</a>
+	      </font>
+	      
+	      
+	      
+	      <div id="disqus_thread"></div>
+	      <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+	      <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+	      {/block:Permalink}
+	      {/block:IfDisqusShortname}
 
-    {block:IfShowPostNotes}
-      {block:PostNotes}
-        {PostNotes}
-      {/block:PostNotes}
-    {/block:IfShowPostNotes}
+	      {block:IfShowPostNotes}
+	      {block:PostNotes}
+              {PostNotes}
+	      {/block:PostNotes}
+	      {/block:IfShowPostNotes}
 
-  </li>
-  {/block:Posts}
-</ul>
+	  </li>
+	  {/block:Posts}
+	</ul>
 
-<div id="footer">
-  {block:PreviousPage}
-  <a href="{PreviousPage}" title="Newer posts">&larr;</a>
-  {/block:PreviousPage}
-  {block:NextPage}
-  <a href="{NextPage}" title="Older posts">&rarr;</a>
-  {/block:NextPage}
-</div>
+	<div id="footer">
+	  {block:PreviousPage}
+	  <a href="{PreviousPage}" title="Newer posts">&larr;</a>
+	  {/block:PreviousPage}
+	  {block:NextPage}
+	  <a href="{NextPage}" title="Older posts">&rarr;</a>
+	  {/block:NextPage}
+	</div>
 
       </div>
     </div>
