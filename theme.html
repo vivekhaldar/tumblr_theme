@@ -174,43 +174,12 @@
 
 	<h1><a href="/">{Title}</a></h1>
 
-	<div id="description">
-	  <p>{Description}</p>
 
-	  <p class="meta">
-	    <a href="/archive">Archive</a>
-	    <span class="dim">/</span>
-	    <a href="{RSS}">RSS</a>
-	    {block:IfLinkToLikedPosts}
-	    {block:Likes}
-	    <br/>
-	    <a href="http://www.tumblr.com/liked/by/{Name}">Stuff I Like</a>
-	    {/block:Likes}
-	    {/block:IfLinkToLikedPosts}
-	    {block:IfLinkToTheme}
-	    <br/>
-	    <a href="http://www.tumblr.com/theme/1386">Use This Theme</a>
-	    {/block:IfLinkToTheme}
-	  </p>
-
-	  <p>
-	    <a href="http://blog.vivekhaldar.com/about">About</a> /
-	    <a href="http://blog.vivekhaldar.com/popular">Popular</a> /
-	    <a href="https://twitter.com/vivekhaldar" class="twitter-follow-button" data-show-count="false">Follow @vivekhaldar</a>
-	    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-	  </p>
-	</div>
 
 	<ul id="posts">
 	  {block:Posts}
 	  <li class="post">
 
-	    <h2 class="permalink">
-              {block:NewDayDate}
-              <a title="{NoteCountWithLabel}"
-		 href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
-              {/block:NewDayDate}
-	    </h2>
 
 	    {block:Regular}
 	    <div class="post-body text-post">
