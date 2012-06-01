@@ -171,8 +171,6 @@
       {CustomCSS}
     </style>
 
-    <!-- for Google Plus buttons -->
-    <script type='text/javascript' src='http://apis.google.com/js/plusone.js'></script>
   </head>
   <body class="{block:IfDarkColourScheme}dark{/block:IfDarkColourScheme}">
     <div id="body">
@@ -299,22 +297,6 @@
 
 	    {block:IfDisqusShortname}
 	    {block:Permalink}
-	    
-              {block:IfNotDisqusShortName}
-              {block:SameDayDate}
-              <a title="{NoteCountWithLabel}"
-		 href="{Permalink}">&rarr;</a>
-              {/block:SameDayDate}
-              {/block:IfNotDisqusShortName}
-
-              {block:IfDisqusShortname}
-              <a title="{NoteCountWithLabel}"
-		 href="{Permalink}#disqus_thread"></a>
-              {/block:IfDisqusShortname}
-
-	      <!-- Google Plus button -->
-	      <g:plusone size='small' href='{Permalink}'></g:plusone>
-
 
 	    <p>
 	      <font style="BACKGROUND-COLOR: yellow"> If you've read this far,
