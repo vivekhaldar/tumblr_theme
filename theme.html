@@ -216,22 +216,6 @@
               <a title="{NoteCountWithLabel}"
 		 href="{Permalink}">{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}</a>
               {/block:NewDayDate}
-
-              {block:IfNotDisqusShortName}
-              {block:SameDayDate}
-              <a title="{NoteCountWithLabel}"
-		 href="{Permalink}">&rarr;</a>
-              {/block:SameDayDate}
-              {/block:IfNotDisqusShortName}
-
-              {block:IfDisqusShortname}
-              <a title="{NoteCountWithLabel}"
-		 href="{Permalink}#disqus_thread"></a>
-              {/block:IfDisqusShortname}
-
-	      <!-- Google Plus button -->
-	      <g:plusone size='small' href='{Permalink}'></g:plusone>
-
 	    </h2>
 
 	    {block:Regular}
@@ -316,8 +300,29 @@
 	    {block:IfDisqusShortname}
 	    {block:Permalink}
 	    
-	    <p><font style="BACKGROUND-COLOR: yellow">
-		If you've read this far, please consider <a href="http://blog.vivekhaldar.com/rss">subscribing to the RSS feed</a>, or <a href="http://twitter.com/vivekhaldar">following me on Twitter.</a>
+              {block:IfNotDisqusShortName}
+              {block:SameDayDate}
+              <a title="{NoteCountWithLabel}"
+		 href="{Permalink}">&rarr;</a>
+              {/block:SameDayDate}
+              {/block:IfNotDisqusShortName}
+
+              {block:IfDisqusShortname}
+              <a title="{NoteCountWithLabel}"
+		 href="{Permalink}#disqus_thread"></a>
+              {/block:IfDisqusShortname}
+
+	      <!-- Google Plus button -->
+	      <g:plusone size='small' href='{Permalink}'></g:plusone>
+
+
+	    <p>
+	      <font style="BACKGROUND-COLOR: yellow"> If you've read this far,
+		please
+		consider <a href="http://blog.vivekhaldar.com/rss">subscribing
+		to the RSS feed</a>,
+		or <a href="http://twitter.com/vivekhaldar">following me on
+		Twitter.</a>
 	      </font>
 	      
 	      
