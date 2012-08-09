@@ -204,9 +204,10 @@
 	    {block:Regular}
 	    <div class="post-body text-post">
 	      {block:Title}
-	      <h3><a href="{Permalink}">{Title}</a></h3>
+	      <h3>{Title}</h3>
 	      {/block:Title}
-
+	      <p>
+	      <a href="{Permalink}">{DayOfMonth} {Month}, {Year}</a>
 	      {Body}
 	    </div>
 	    {/block:Regular}
@@ -214,7 +215,6 @@
 	    {block:Link}
 	    <div class="post-body link-post">
 	      <h3><a class="link" href="{URL}">{Name}</a></h3>
-
 	      {block:Description}
 	      {Description}
 	      {/block:Description}
