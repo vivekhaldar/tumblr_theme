@@ -1,255 +1,523 @@
-<html lang="en"> 
-  <!--
-
-      ◯
-      Theme by inky.
-      Modified by Vivek Haldar <vh@vivekhaldar.com>
-      Inspired by 'Minimalist', one of the default Tumblr themes.
-
-    -->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>{Title}{block:PostSummary} : {PostSummary}{/block:PostSummary}</title>
-
-    <meta name="color:Background" content="#fff"/>
-    <meta name="color:Text" content="#444"/>
-    <meta name="color:Secondary" content="#888"/>
-    <meta name="color:Minor" content="#bbb"/>
-    <meta name="color:Link" content="#000"/>
-
-    <meta name="if:Dark colour scheme" content="0"/>
-    <meta name="if:Show post notes" content="1"/>
-    <meta name="if:Semitransparent audio player" content="1"/>
-    <meta name="if:Link to liked posts" content="0"/>
-    <meta name="if:Link to theme" content="0"/>
-
-    <meta name="text:Disqus Shortname" content="" />
-
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}"/>
-    <link rel="icon" href="{Favicon}"/>
-    <link rel="me" type="text/html" href="http://www.google.com/profiles/vhaldar"/>
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic' rel='stylesheet' type='text/css'>
-
-    <meta name="readability-verification" content="NnQaPKeFjEsPYZBWT2xZTZm6BJKhBxG9ACKrNErC"/>
-
-
-    <meta name="description" content="{MetaDescription}"/>
-    <style type="text/css">
-      ul, li {margin: 0; padding: 0; border: 0; outline: 0; font-size: inherit;
-      line-height: inherit; vertical-align: baseline; background: transparent;}
-
-      html{margin:0 auto;max-width:30em}
-      body{
-      font-family:'Lato', sans-serif;
-      font-size: 0.8em;
-      padding: 0 .5em 1em .5em; color: #333; background-color: #fff}
-      h1{font-family: 'Lato', sans-serif; font-size:100%; display: inline; }
-      letter-spacing:0.15em;padding:1em 0 0 0}
-      h2{font-size:100%}
-      h3{font-family: 'Lato', sans-serif; font-size:100%; padding-top: 2em; display: inline; font-style: italic; }
-      h4{font-size:100%}
-      p{font-size:100%;line-height:1.5em; }
-      a { text-decoration: none; border-bottom:1px dotted; color: #333 }
-      a:hover { text-decoration: none; border-bottom:1px solid; color: #333; }
-      #posts ul, li { list-style: none; margin-left: 0; }
-      .post ul li {list-style: disc;}
-      .post ol li {list-style: decimal;}
-      ul { margin:0; padding: 0;  }
-      ol { margin:0; padding: 0;  }
-      .quote-post blockquote.quote {
-      font-size: 120%; line-height: 1.5em; text-indent: -7pt;
-      margin: 0; padding: 0; border-width: 0; font-style: italic; }
-      li { line-height: 1.5em; }
-      .image-post { padding-top: 2em; }
-      .text-post { padding-top: 2em; }
-      .quote-post { padding-top: 2em; }
-      .quote-post .quote:before {content: '“'; }
-      .quote-post .quote:after {content: '”';}
-      blockquote {margin-left: -1em; padding-left: 1em; border-left: 0.2em solid;}
-      .date-permalink { float: right; color: #aaa; }
-      .date-permalink a { color: #aaa; font-size: 80%; }
-      .belowhead a {  color: #aaa; }
-      .belowhead { color: #aaa; font-size: 80%; padding-top: 0.5em; }
-      hr { margin-top: 2em; margin-bottom: 2em; border: 0;  width: 100%; color: #aaa; background-color: #aaa; height: 0.1em;}
+<!DOCTYPE html>
+<!--
+ 
+      Theme by Vivek Haldar.
       
-      @media only screen and (max-width:700px) {
-        body{  font-size: 1.5em; }
-        html{margin:0 auto; max-width: 90%;}
-      }
-    </style>
+      Based on
+      Theme: Ashley v0.4
+      Author: Jxnblk  [http://jxnblk.com]
+      For: Tumblr  [http://tumblr.com/]
+      Terms: Protected under Creative Commons.
 
-  </head>
-  <body class="{block:IfDarkColourScheme}dark{/block:IfDarkColourScheme}">
-    <div id="body">
-      <div id="content">
-    <div>
-          <h1>This is the <a href="/">blog</a> of Vivek Haldar</h1>
-	  <div class="belowhead">
-	    <strong><em><a href="http://blog.vivekhaldar.com/start">Start Here</a></em></strong> /
+      
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+		<!-- Custom Variables -->
+		<meta name="image:Logo" content=""/>
+		<meta name="text:Colophon" content="Copyright 2008-2013 Vivek Haldar"/>
+		<meta name="text:GoogleWebFont" content="PT Serif"/>
+		<meta name="text:GoogleWebFontURL" content="PT+Serif"/>
+		<meta name="color:Background" content="#fff"/>
+    <meta name="color:Text" content="#444"/>
+    <meta name="color:Link" content="#099"/>
+		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+		<link rel="shortcut icon" href="{Favicon}">
+		<link rel="apple-touch-icon" href="{PortraitURL-128}">
+		<link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:IfGoogleWebFont}
+      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+    {/block:IfGoogleWebFont}
+    <meta name=viewport content='width=device-width, initial-scale=1'>
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<style>
+      
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      
+      body {
+        color: {color:Text};
+        background: {color:Background};
+        font-family: '{text:GoogleWebFont}', Georgia, serif;
+        font-size: 100%;
+        line-height: 1.5;
+        font-weight: 400;
+      }
+      
+      
+      h1, h2, .h1, .h2 {
+        font-weight: 700;
+        line-height: 1.25;
+        margin-top: .5em;
+      }
+      
+      h1, .h1 {
+        font-size: 1em;
+      }
+      
+      h2, .h2 {
+        font-size: 1em;
+      }
+      
+      h3, .h3 {
+        font-size: 1em;
+      }
+      
+      h1+h2 { margin-top: 0; }
+      
+      p, .p, ul, ol {
+        font-size: 16px;
+      }
+      
+      small, .small {
+        font-size: 14px;
+      }
+      
+      strong, .strong {
+        font-weight: 700;
+      }
+      
+      p, ul, ol { margin-top: 1em; }
+      
+            @media screen and (min-width: 480px) {
+              h1, .h1 { font-size: 1em; }
+              h2, .h2 { font-size: 1em; }
+              h3, .h3 { font-size: 1em; }
+              p, .p, ul, ol { font-size: 16px;}
+              small, .small { font-size: 14px;}
+            }
+            
+            @media screen and (min-width: 640px) {
+              h1, .h1 { font-size: 1em; }
+              h2, .h2 { font-size: 1em; } 
+              h3, .h3 { font-size: 1em; }
+            }
+      
+      
+      .wrap {
+        width: 90%;
+        padding: 0 5%;
+        max-width: 35em;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      
+      article {
+        margin-top: 4em;
+      }
+      
+      a {
+        color: {color:Link};
+        text-decoration: none;
+        border-bottom: 1px dotted;
+      }
+      
+      a:hover {
+        text-decoration: none;
+      }
+      
+      header {
+        width: 90%;
+        padding: 2em 5% 0;
+        max-width: 35em;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      
+      header:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
+      }
+      
+      .logo {
+        float: left;
+        margin-right: 1em;
+      }
+      
+      header h1, header p {
+        margin: 0;
+      }
+      
+      header a, a.post-title {
+        color: {color:Text};
+      }
+      
+      a.post-title:hover {
+        text-decoration: none;
+        color: {color:Link};
+      }
+      
+      header a:hover {
+        text-decoration: none;
+      }
+      
+      .post img,
+      .photoset,
+      .photoset img,
+      .photoset_row {
+        max-width: 100%;
+      }
+      
+      .post iframe, .video object {
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .post blockquote {
+        margin-left: -1em;
+        padding-left: 0.8em;
+        border-left: 0.2em solid #777;
+      }
+      
+      .post ul, .post ol {
+        margin-left: 0;
+      }
+      
+      .post footer ul, .post footer ol {
+        margin: 0;
+      }
+      
+      .quote blockquote {
+        padding-left: 1em;
+        border: none;
+        font-style: italic;
+      }
+      
+      .quote .source {
+        text-align: right;
+      }
+      
+      .post footer {
+        padding: 0;
+        margin-top: 1em;
+        color: #aaa;
+        font-style: italic;
+      }
+      
+      .post footer a {
+        color: #aaa;
+      }
+      
+      .post footer a:hover {
+        color: #999;
+      }
+      
+      .post footer .source {
+        float: right;
+        margin-right: 0;
+      }
+      
+      .post footer ul li {
+        display: inline-block;
+        margin-right: 1em;
+      }
+      
+      .tags {
+        margin-top: 1em;
+      }
+      
+      .pagination {
+        margin-top: 4em;
+        text-align: center;
+        line-height: 3em;
+      }
+      
+      .pagination:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
+      }
+      
+      .pagination a {
+        display: block;
+        height: 3em;
+        padding: 0 1em;
+        border-radius: 0.25em;
+      }
+      
+      .pagination a:hover {
+        background: #eee;
+        text-decoration: none;
+      }
+      
+      .pagination .previous {
+        float: left;
+      }
+      
+      .pagination .next {
+        float: right;
+      }
+
+    
+      footer.wrap {
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+      
+      ul.pages {
+        list-style: none;
+      }
+      
+      ul.pages li {
+        display: inline-block;
+        margin-right: 1em;        
+      }
+      
+      ul.pages li a {
+        display: block;
+        height: 3em;
+        line-height: 3em;
+      }
+      
+      
+      /* Permalink Notes */
+      
+      aside.notes {
+        margin-top: 4em;
+      }
+      
+      ol.notes {
+        list-style: none;
+        margin-top: 1em;
+        border: 1px solid #ddd;
+        border-radius: 0.25em;
+      }
+      
+      ol.notes, ol.notes a {
+        color: #aaa;
+      }
+      
+      li.note {
+        display: block;
+        line-height: 2em;
+        padding: 0.5em 1em;
+        border-bottom: 1px solid #ddd;
+      }
+      li.note:last-child {
+        border: none;
+      }
+      
+      ol.notes li.note img.avatar {
+        display: block;
+        float: left;
+        width: 2em;
+        height: 2em;
+        margin-right: 1em;
+        border-radius: 0.25em;
+      }
+      
+      .notes .action a {
+        color: {color:Text};
+      }
+      
+      .action {
+        display: block;
+        margin-left: 3em;
+      }
+      
+      .notes blockquote {
+        line-height: 1.5;
+        margin-left: 3em;
+      }
+      
+      .belowhead a {
+        color: #aaa;
+      }
+      .belowhead {
+        color: #aaa;
+        font-size: 80%;
+        padding-top: 0.5em;
+      }
+		  
+			{CustomCSS}
+			
+		</style>
+</head>
+<body>
+
+  <header>
+    {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
+  	<h1>This is the <a href="/">blog</a> of Vivek Haldar</h1>
+  	{block:Description}
+  		<p>{Description}</p>
+  	{/block:Description}
+    <div class="belowhead">
+        <strong><em><a href="http://blog.vivekhaldar.com/start">Start Here</a></em></strong> /
 	    <a href="{RSS}">RSS</a> /
 	    <a href="http://blog.vivekhaldar.com/about">About</a> /
 	    <a href="https://twitter.com/vivekhaldar">@vivekhaldar</a>
-	  </div>
 	</div>
+  </header>
 
-	<script type="text/javascript">
-	  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	  try {
-	  var pageTracker = _gat._getTracker("UA-13242635-1");
-	  pageTracker._trackPageview();
-	  } catch(err) {}</script>
+		<div class="content wrap">
+			<section class="posts">
+				{block:NoSearchResults}
+					<h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
+				{/block:NoSearchResults}
 
-	<ul id="posts">
-	  {block:Posts}
-	  <li class="post">
+				{block:TagPage}
+					<h2 class="h1">#{Tag}</h2>
+				{/block:TagPage}
 
+				{block:Posts}
+					<article class="post {PostType}">
+						{block:Text}
+							{block:Title}
+								<a href="{Permalink}" class="post-title"><h2>{Title}</h2></a>
+							{/block:Title}
+							
+							{Body}
+							
+							{block:More}<a href="{Permalink}" class="p">Read More &raquo;</a>{/block:More}
+							
+						{/block:Text}
 
-	    {block:Regular}
-	    <div class="post-body text-post">
-	      <h3>{Title}</h3>
-	      <div class="date-permalink" >
-		 <a title="{NoteCountWithLabel}"
-		   href="{Permalink}">{DayOfMonth} {Month}, {Year}</a>
-	      </div>
-	      {Body}
-	    </div>
-	    {/block:Regular}
+						{block:Photo}
+							{LinkOpenTag}
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}">           
+							{LinkCloseTag}
 
-	    {block:Link}
-	    <div class="post-body link-post">
-	      <h3><a class="link" href="{URL}">{Name}</a></h3>
-	      {block:Description}
-	      {Description}
-	      {/block:Description}
-	    </div>
-	    {/block:Link}
+							{block:Caption}
+								{Caption}
+							{/block:Caption}
+						{/block:Photo}
 
-	    {block:Photo}
-	    <div class="post-body image-post">
-	      <div class="image">
-		{LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}"/>{LinkCloseTag}
-	      </div>
+						{block:Photoset}
+							{Photoset-500}
 
-	      {block:Caption}
-	      <div class="caption">{Caption}</div>
-	      {/block:Caption}
-	    </div>
-	    {/block:Photo}
+							{block:Caption}
+								{Caption}
+							{/block:Caption}
+						{/block:Photoset}
 
-	    {block:Video}
-	    <div class="post-body video-post">
-	      {Video-500}
+						{block:Quote}
+							<blockquote>
+								<p class="h3">&ldquo;{Quote}&rdquo;</p>
 
-	      {block:Caption}
-	      <div class="caption">{Caption}</div>
-	      {/block:Caption}
-	    </div>
-	    {/block:Video}
+								{block:Source}
+									<p class="source">&ndash; {Source}</p>
+								{/block:Source}
+							</blockquote>
+						{/block:Quote}
 
-	    {block:Audio}
-	    <div class="post-body audio-post">
-	      <div class="audio">{AudioPlayerBlack}</div>
+						{block:Link}
+							<h2><a href="{URL}"{Target}>{Name} &raquo;</a></h2>
 
-	      {block:Caption}
-	      <div class="caption">{Caption}</div>
-	      {/block:Caption}
-	    </div>
-	    {/block:Audio}
+							{block:Description}
+								{Description}
+							{/block:Description}
+						{/block:Link}
 
-	    {block:Quote}
-	    <div class="post-body quote-post">
-	      <blockquote class="quote">{Quote}</blockquote>
+						{block:Chat}
+							{block:Title}
+								<h2>{Title}</h2>
+							{/block:Title}
 
-	      {block:Source}
-	      <p class="cite">&mdash;&#8194;{Source}</p>
-	      {/block:Source}
-	    </div>
-	    {/block:Quote}
+							<ul>
+								{block:Lines}
+									<li class="{Alt}">
+										{block:Label}
+										    <b>{Label}</b>
+										{/block:Label}
 
-	    {block:Conversation}
-	    <div class="post-body chat-post">
-	      {block:Title}
-	      <h3>{Title}</h3>
-	      {/block:Title}
+										{Line}
+									</li>
+								{/block:Lines}
+							</ul>
+						{/block:Chat}
 
-	      <ol>
-		{block:Lines}
-		<li>
-		  {block:Label}<b class="label">{Label}</b>{/block:Label}
-		  {Line}
-		</li>
-		{/block:Lines}
-	      </ol>
-	    </div>
-	    {/block:Conversation}
+						{block:Audio}
+							
+						  {AudioEmbed-640}
+							
+							{block:Caption}
+								{Caption}
+							{/block:Caption}
+						{/block:Audio}
 
-	    {block:IfDisqusShortname}
-	    {block:Permalink}
+						{block:Video}
+							{Video-700}
 
-	    <!-- <p> -->
-	    <!--   <font style="BACKGROUND-COLOR: yellow"> If you've read this far, -->
-	    <!-- 	please -->
-	    <!-- 	consider <a href="http://blog.vivekhaldar.com/rss">subscribing -->
-	    <!-- 	to the RSS feed</a>, -->
-	    <!-- 	or <a href="http://twitter.com/vivekhaldar">following me on -->
-	    <!-- 	Twitter.</a> -->
-	    <!--   </font> -->
-	      
-	      
-	      
-	      <div id="disqus_thread"></div>
-	      <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-	      <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
-	      {/block:Permalink}
-	      {/block:IfDisqusShortname}
+							{block:Caption}
+								{Caption}
+							{/block:Caption}
+						{/block:Video}
 
-	      {block:IfShowPostNotes}
-	      {block:PostNotes}
-              {PostNotes}
-	      {/block:PostNotes}
-	      {/block:IfShowPostNotes}
+						{block:Answer}
+							<h2>{Asker} asked: <q>{Question}</q></h2>
 
-          <hr>
-	  </li>
+							{Answer}
+						{/block:Answer}
 
-	  {/block:Posts}
-	</ul>
+						{block:Date}
+							<footer>
+								<ul class="small">
+									<li><a href="{Permalink}" title="{DayOfWeek}, {DayOfMonth} {Month} {Year}, {24Hour}:{Minutes}:{Seconds}">{TimeAgo}</a></li>
+									{block:RebloggedFrom}<li class="source"> (reblogged from <a href="{ReblogParentURL}">{ReblogParentName}</a>)</li>{/block:RebloggedFrom}
+									{block:ContentSource}
+										<li class="source">via <a href="{SourceURL}">{SourceTitle}</a></li>
+									{/block:ContentSource}
+								</ul>
+								
+								{block:PermalinkPage}
+                    {block:HasTags}
+  											<ul class="tags">
+  												{block:Tags}
+  													<li>
+  														<a href="{TagURL}">#{Tag}</a>
+  													</li>
+  												{/block:Tags}
+  											</ul>
+  									{/block:HasTags}			
+								{/block:PermalinkPage}
+															
+							</footer>
+						{/block:Date}
+					</article> <!-- /post -->			
+				
+  				{block:PostNotes}
+  				  <aside class="notes">
+    				  {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
+    					{PostNotes-64}
+  				  </aside>
+  				{/block:PostNotes}
 
-
-	<div id="footer">
-	  {block:PreviousPage}
-	  <a href="{PreviousPage}" title="Newer posts">&larr;</a>
-	  {/block:PreviousPage}
-	  {block:NextPage}
-	  <a href="{NextPage}" title="Older posts">&rarr;</a>
-	  {/block:NextPage}
-	</div>
-
-      </div>
-    </div>
-
-    <script type="text/javascript" src="http://static.tumblr.com/ovvtvf9/wnakwva42/jquery-1.3.2.min.js"></script>
-    <script type="text/javascript" src="http://static.tumblr.com/ovvtvf9/LOskwvhm8/o.js"></script>
-
-    {block:IfDisqusShortname}
-    <script type="text/javascript">
-      //<![CDATA[
-      (function() {
-        var links = document.getElementsByTagName('a');
-        var query = '?';
-        for(var i = 0; i < links.length; i++) {
-          if(links[i].href.indexOf('#disqus_thread') >= 0) {
-            query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-          }
-        }
-        document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
-      })();
-    //]]>
-    </script>
-    {/block:IfDisqusShortname}
-  </body>
+				{/block:Posts}
+				
+				{block:Pagination}
+					<div class="pagination p">
+						<span class="previous">{block:PreviousPage}<a href="{PreviousPage}" class="previous">{/block:PreviousPage}&laquo; Previous{block:PreviousPage}</a>{/block:PreviousPage}</span>
+						<span class="page-numbers">{CurrentPage}/{TotalPages}</span>
+						<span class="next">{block:NextPage}<a href="{NextPage}">{/block:NextPage}Next &raquo;{block:NextPage}</a>{/block:NextPage}</span>
+					</div>
+				{/block:Pagination}
+							
+			</section> <!-- /posts -->
+		</div> <!-- /content -->
+	
+	<footer class="small wrap">
+  	{block:HasPages}
+  		<ul class="pages">
+				{block:Pages}
+					<li><a href="{URL}">{Label}</a></li>
+				{/block:Pages}
+  		</ul>
+		{/block:HasPages}
+		{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
+	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
+	</footer>
+	
+</body>
 </html>
