@@ -18,11 +18,12 @@
 		<!-- Custom Variables -->
 		<meta name="image:Logo" content=""/>
 		<meta name="text:Colophon" content="Copyright 2008-2013 Vivek Haldar"/>
-		<meta name="text:GoogleWebFont" content="PT Serif"/>
-		<meta name="text:GoogleWebFontURL" content="PT+Serif"/>
+		<meta name="text:GoogleWebFont" content="Lato"/>
+		<meta name="text:GoogleWebFontURL" content="Lato"/>
 		<meta name="color:Background" content="#fff"/>
-    <meta name="color:Text" content="#444"/>
-    <meta name="color:Link" content="#099"/>
+        <meta name="color:Text" content="#333"/>
+        <meta name="color:Link" content="#333"/>
+        <meta name="text:Disqus Shortname" content="vivekhaldar" />
 		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
 		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
 		<link rel="shortcut icon" href="{Favicon}">
@@ -45,7 +46,7 @@
       body {
         color: {color:Text};
         background: {color:Background};
-        font-family: '{text:GoogleWebFont}', Georgia, serif;
+        font-family: '{text:GoogleWebFont}', sans-serif, Helvetica, serif;
         font-size: 100%;
         line-height: 1.5;
         font-weight: 400;
@@ -361,18 +362,6 @@
 	</div>
   </header>
 
-
-  <script type="text/javascript">
-	  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-	<script type="text/javascript">
-	  try {
-	  var pageTracker = _gat._getTracker("UA-13242635-1");
-	  pageTracker._trackPageview();
-	  } catch(err) {}
-  </script>
-
 		<div class="content wrap">
 			<section class="posts">
 				{block:NoSearchResults}
@@ -499,6 +488,27 @@
 						{/block:Date}
 					</article> <!-- /post -->			
 				
+                
+                {block:IfDisqusShortname}
+                {block:Permalink}
+
+	    <!-- <p> -->
+	    <!--   <font style="BACKGROUND-COLOR: yellow"> If you've read this far, -->
+	    <!-- 	please -->
+	    <!-- 	consider <a href="http://blog.vivekhaldar.com/rss">subscribing -->
+	    <!-- 	to the RSS feed</a>, -->
+	    <!-- 	or <a href="http://twitter.com/vivekhaldar">following me on -->
+	    <!-- 	Twitter.</a> -->
+	    <!--   </font> -->
+
+
+
+	            <div id="disqus_thread"></div>
+	            <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+	            <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+	            {/block:Permalink}
+	            {/block:IfDisqusShortname}
+          
   				{block:PostNotes}
   				  <aside class="notes">
     				  {block:NoteCount}<p>{NoteCountWithLabel}</p>{/block:NoteCount}
