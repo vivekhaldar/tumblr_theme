@@ -15,7 +15,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-		<!-- Custom Variables -->
+        <!-- Custom Variables -->
 		<meta name="image:Logo" content=""/>
 		<meta name="text:Colophon" content="Copyright 2008-2013 Vivek Haldar"/>
 		<meta name="text:GoogleWebFont" content="Lato"/>
@@ -36,7 +36,7 @@
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<style>
+    	<style>
       
       * {
         margin: 0;
@@ -44,8 +44,8 @@
       }
       
       body {
-        color: {color:Text};
-        background: {color:Background};
+        color: #333;
+        background: #fff;
         font-family: '{text:GoogleWebFont}', sans-serif, Helvetica, serif;
         font-size: 100%;
         line-height: 1.5;
@@ -54,21 +54,10 @@
       
       
       h1, h2, .h1, .h2 {
-        font-weight: 700;
+        font-weight: 900;
         line-height: 1.25;
         margin-top: .5em;
-      }
-      
-      h1, .h1 {
-        font-size: 1em;
-      }
-      
-      h2, .h2 {
-        font-size: 1em;
-      }
-      
-      h3, .h3 {
-        font-size: 1em;
+        color: #897753; /* cHeading */
       }
       
       h1+h2 { margin-top: 0; }
@@ -88,16 +77,16 @@
       p, ul, ol { margin-top: 1em; }
       
             @media screen and (min-width: 480px) {
-              h1, .h1 { font-size: 1em; }
-              h2, .h2 { font-size: 1em; }
+              h1, .h1 { font-size: 2em; }
+              h2, .h2 { font-size: 1.618em; }
               h3, .h3 { font-size: 1em; }
               p, .p, ul, ol { font-size: 16px;}
               small, .small { font-size: 14px;}
             }
             
             @media screen and (min-width: 640px) {
-              h1, .h1 { font-size: 1em; }
-              h2, .h2 { font-size: 1em; } 
+              h1, .h1 { font-size: 2em; }
+              h2, .h2 { font-size: 1.618em; } 
               h3, .h3 { font-size: 1em; }
             }
       
@@ -115,13 +104,14 @@
       }
       
       a {
-        color: {color:Link};
+        color: #554939; /* cLink */
         text-decoration: none;
-        border-bottom: 1px dotted;
+        border-bottom: 1px solid #554939; /* cLink */
       }
       
       a:hover {
         text-decoration: none;
+        color: #897753; /* cLinkHover */
       }
       
       header {
@@ -149,9 +139,11 @@
         margin: 0;
       }
       
+      /*
       header a, a.post-title {
-        color: {color:Text};
+        color: #333;
       }
+      */
       
       a.post-title:hover {
         text-decoration: none;
@@ -177,7 +169,7 @@
       .post blockquote {
         margin-left: -1em;
         padding-left: 0.8em;
-        border-left: 0.2em solid #777;
+        border-left: 0.2em solid #897753; /* cBlockQuote */
       }
       
       .post ul, .post ol {
@@ -201,16 +193,16 @@
       .post footer {
         padding: 0;
         margin-top: 1em;
-        color: #aaa;
+        color: #727e7d; /* cDimText */
         font-style: italic;
       }
       
       .post footer a {
-        color: #aaa;
+        color: #727e7d; /* cDimText */;
       }
       
       .post footer a:hover {
-        color: #999;
+        color: #3f4038;
       }
       
       .post footer .source {
@@ -344,8 +336,7 @@
 		  
 			{CustomCSS}
 			
-		</style>
-</head>
+		</style></head>
 <body>
 
   <script type="text/javascript">
