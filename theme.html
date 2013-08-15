@@ -16,27 +16,32 @@
 <head>
     <meta charset="UTF-8">
         <!-- Custom Variables -->
-		<meta name="image:Logo" content=""/>
-		<meta name="text:Colophon" content="Copyright 2008-2013 Vivek Haldar"/>
+      <meta name="image:Logo" content=""/>
+        <meta name="text:Colophon" content="Copyright 2008-2013 Vivek Haldar"/>
 		<meta name="text:GoogleWebFont" content="Lato"/>
 		<meta name="text:GoogleWebFontURL" content="Lato"/>
 		<meta name="color:Background" content="#fff"/>
         <meta name="color:Text" content="#333"/>
         <meta name="color:Link" content="#333"/>
         <meta name="text:Disqus Shortname" content="vivekhaldar" />
+        
+        
+        
+        
+        
 		<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
 		{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
 		<link rel="shortcut icon" href="{Favicon}">
 		<link rel="apple-touch-icon" href="{PortraitURL-128}">
 		<link rel="alternate" type="application/rss+xml" href="{RSS}">
     {block:IfGoogleWebFont}
-      <link href='http://fonts.googleapis.com/css?family={text:GoogleWebFontURL}' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     {/block:IfGoogleWebFont}
     <meta name=viewport content='width=device-width, initial-scale=1'>
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-    	<style>
+		<style>
       
       * {
         margin: 0;
@@ -46,7 +51,7 @@
       body {
         color: #333;
         background: #fff;
-        font-family: '{text:GoogleWebFont}', sans-serif, Helvetica, serif;
+        font-family: 'Lato', sans-serif, Helvetica, serif;
         font-size: 100%;
         line-height: 1.5;
         font-weight: 400;
@@ -76,28 +81,95 @@
       
       p, ul, ol { margin-top: 1em; }
       
-            @media screen and (min-width: 480px) {
-              h1, .h1 { font-size: 2em; }
-              h2, .h2 { font-size: 1.618em; }
-              h3, .h3 { font-size: 1em; }
-              p, .p, ul, ol { font-size: 16px;}
-              small, .small { font-size: 14px;}
-            }
-            
-            @media screen and (min-width: 640px) {
-              h1, .h1 { font-size: 2em; }
-              h2, .h2 { font-size: 1.618em; } 
-              h3, .h3 { font-size: 1em; }
-            }
       
+      .content {
+        /* max-width: 75em; */
+        min-width: 20em;
+        margin: auto;
+      }
       
-      .wrap {
+      .top {
+        width: 100%;
+        float: top;
+        background: #3f4038;
+        color: #a8aa9c;
+      }
+      .top h1 {
+        color: #a8aa9c;
+      }
+      .top a {
+        color: #897753;   
+      }
+      
+      .main {
+        max-width: 35em;
+        min-width: 10em;
+        margin-left: 2em;
+        float: left;
+        /* background: #090; */
+          
+          /*
         width: 90%;
         padding: 0 5%;
         max-width: 35em;
         margin: 0 auto;
         overflow: hidden;
+        float: center;
+        */
       }
+      
+      .side {
+        max-width: 30em;
+        min-width: 10em;
+        font-size: 0.8em;
+        /* background: #727e7d; */
+        /* background: #a8aa9c; */
+        margin-left: 2em;
+        color: #727e7d;
+        float: left;
+      }
+      .side h3 {
+        color: #897753;   
+      }
+      .side li {
+        margin-left: 0em;
+        list-style-type: none;
+        display: inline;
+        font-size: 0.8em;
+      }
+      .side li + li::before {
+        content: " // ";
+      }
+
+            @media screen and (max-width: 640px) {
+              h1, .h1 { font-size: 2em; }
+              h2, .h2 { font-size: 1.618em; }
+              h3, .h3 { font-size: 1em; }
+              p, .p, ul, ol { font-size: 16px;}
+              small, .small { font-size: 14px;}
+
+/*
+             .side {
+                float: none;
+                background: #009;
+              }
+              */
+
+            }
+            /*
+            @media screen and (max-width: 640px) {
+              h1, .h1 { font-size: 2em; }
+              h2, .h2 { font-size: 1.618em; } 
+              h3, .h3 { font-size: 1em; }
+              
+              .side {
+                float: none;
+                background: #009;
+              }
+            }
+            */
+      
+      
       
       article {
         margin-top: 4em;
@@ -120,6 +192,7 @@
         max-width: 35em;
         margin: 0 auto;
         overflow: hidden;
+        float: left;
       }
       
       header:after {
@@ -336,8 +409,10 @@
 		  
 			{CustomCSS}
 			
-		</style></head>
+		</style>
+</head>
 <body>
+
 
   <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -350,21 +425,23 @@
     } catch(err) {}
   </script>
 
-  <header>
-    {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
-  	<h1>This is the <a href="/">blog</a> of Vivek Haldar</h1>
-  	{block:Description}
+
+		<div class="content">
+          <div class="top">
+           <div style="margin-left: 2em; padding-top: 0.5em; padding-bottom: 1em;">
+              {block:IfLogoImage}<a href="/"><img src="{image:Logo}" class="logo" /></a>{/block:IfLogoImage}
+      <h1>This is the <a href="/">blog</a> of Vivek Haldar</h1>
+      {block:Description}
   		<p>{Description}</p>
   	{/block:Description}
-    <div class="belowhead">
-        <strong><em><a href="http://blog.vivekhaldar.com/start">Start Here</a></em></strong> /
-	    <a href="{RSS}">RSS</a> /
-	    <a href="http://blog.vivekhaldar.com/about">About</a> /
-	    <a href="https://twitter.com/vivekhaldar">@vivekhaldar</a>
-	</div>
-  </header>
+    
+	
 
-		<div class="content wrap">
+           </div> <!-- style inside top -->
+
+          </div>  <!-- /top -->
+          <div class="main">
+          
 			<section class="posts">
 				{block:NoSearchResults}
 					<h2>Sorry, nothing found for &ldquo;{SearchQuery}&rdquo;.</h2>
@@ -529,9 +606,8 @@
 				{/block:Pagination}
 							
 			</section> <!-- /posts -->
-		</div> <!-- /content -->
-	
-	<footer class="small wrap">
+            
+                <footer class="small wrap">
   	{block:HasPages}
   		<ul class="pages">
 				{block:Pages}
@@ -542,6 +618,91 @@
 		{block:AskEnabled}<a href="/ask">{AskLabel}</a>{/block:AskEnabled}
 	  {block:IfColophon}<p class="small">{text:Colophon}</p>{block:IfColophon}
 	</footer>
+
+<div class="small">
+<a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/us/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/us/">Creative Commons Attribution 3.0 United States License</a>.
+</div>
+            
+            
+          </div> <!-- /main -->
+          <div class="side">
+          
+          <div style="padding-top:4em">
+          </div>
+          
+                  <strong><em><a href="http://blog.vivekhaldar.com/start">Start Here</a></em></strong> //
+        <a href="{RSS}">RSS</a> //
+	    <a href="http://blog.vivekhaldar.com/about">About</a> //
+	    <a href="https://twitter.com/vivekhaldar">@vivekhaldar</a>
+
+          
+          
+          <ul>
+          <li><strong><a href="http://blog.vivekhaldar.com/tagged/popular">Popular</a></strong>
+          <li><a href="http://blog.vivekhaldar.com/post/10669678292/size-is-the-bes-predictor-of-code-quality">Size is the best predictor of code quality</a>   
+          <li><a href="http://blog.vivekhaldar.com/post/28465017852/productivity-porn">Productivity porn</a>                                                    
+          <li><a href="http://blog.vivekhaldar.com/post/42007984829/computer-science-phd-trends">Computer Science PhD trends</a>                                
+          <li><a href="http://blog.vivekhaldar.com/post/3339907908/the-cognitive-style-of-unix">The Cognitive Style of Unix</a>                                 
+          <li><a href="http://blog.vivekhaldar.com/post/29296581613/wha-is-life-like-for-phds-in-computer-science-who-go">What is life like for PhDs in computer science who go into industry?</a>                                                                                                                             
+          <li><a href="http://blog.vivekhaldar.com/post/8950163616/gui-vs-cli-operation-vs-expression">GUI vs CLI: Operation vs Expression </a>                 
+          <li><a href="http://blog.vivekhaldar.com/post/10126017769/smeeds-la-for-programming">Smeed's Law for Programming</a>                                  
+          <li><a href="http://blog.vivekhaldar.com/post/34386970746/why-you-would-wan-to-program-a-fifty-or-any-other">Why you would want to program at fifty (or any other age)</a>       
+           </ul>
+          
+          
+          <ul>
+          <li><strong><a href="http:/blog.vivekhaldar.com/tagged/modernwork">Modern Work</a></strong>
+          <li><a href="http://blog.vivekhaldar.com/post/56222096673/the-perils-of-being-a-knowledge-worker">The perils of being a knowledge worker</a>
+          <li><a href="http://blog.vivekhaldar.com/post/55117706302/balance">Balance</a>
+          <li><a href="http://blog.vivekhaldar.com/post/54192213683/the-laziness-of-synchronous-work">The laziness of synchronous work</a>
+          <li><a href="http://blog.vivekhaldar.com/post/52439380524/cpu-pipelines-and-the-structure-of-work">CPU pipelines and the structure of work</a>
+          <li><a href="http://blog.vivekhaldar.com/post/46115343038/we-are-all-mad-men">We are all Mad Men</a>
+          <li><a href="http://blog.vivekhaldar.com/post/45231931433/addicted-to-work">Addicted to work</a>
+          <li><a href="http://blog.vivekhaldar.com/post/41766621720/blue-collar-coders">Blue collar coders</a>
+          <li><a href="http://blog.vivekhaldar.com/post/40018875700/scaling-communication-email-vs-shared-documents">Scaling communication: email vs shared documents</a>
+          <li><a href="http://blog.vivekhaldar.com/post/38385618104/quantum-of-work">Quantum of Work</a>
+          <li><a href="http://blog.vivekhaldar.com/post/29133221398/the-lure-of-work">The lure of work</a>
+          <li><a href="http://blog.vivekhaldar.com/post/27415471917/on-vagueness">On Vagueness</a>
+          <li><a href="http://blog.vivekhaldar.com/post/26291176846/working-asynchronously">Working asynchronously</a>
+          <li><a href="http://blog.vivekhaldar.com/post/13241026081/the-programming-assembly-line">The programming assembly-line</a>
+            
+        </ul>
+        
+        <ul>
+        <li><strong><a href="http://blog.vivekhaldar/tagged/economics">Economics of code</a></strong>
+        <li><a href="http://blog.vivekhaldar.com/post/27962511395/is-c-c-worth-it">Is C/C++ worth it?</a>
+<li><a href="http://blog.vivekhaldar.com/post/19345320355/innovators-dilemma-in-programming-languages">Innovator’s dilemma in programming languages</a>
+<li><a href="http://blog.vivekhaldar.com/post/15628047570/the-cs-assignment-i-wish-i-had">The CS assignment I wish I had</a>
+<li><a href="http://blog.vivekhaldar.com/post/13855406981/the-0-1x-developer">The 0.1x developer</a>
+<li><a href="http://blog.vivekhaldar.com/post/10968747879/why-developers-should-learn-the-economics-of-code">Why developers should learn the economics of code</a>
+        </ul>
+        
+        
+        <ul>
+        <li><strong><a href="http://blog.vivekhaldar.com/tagged/programming">Programming</a></strong></li>
+<li><a href="http://blog.vivekhaldar.com/post/12785508353/the-abstraction-optimization-tradeoff">The abstraction-optimization tradeoff</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/39938502197/the-rise-of-fimperative-programming">The rise of fimperative programming</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/4525315474/oop-fp">OOP = FP?</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/49821678549/future-programming">Future Programming</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/23162993767/the-7-stages-of-debugging">The 7 stages of debugging </a></li>
+<li><a href="http://blog.vivekhaldar.com/post/23228299846/the-need-for-easter-eggs">The need for Easter eggs </a></li>
+<li><a href="http://blog.vivekhaldar.com/post/36517698671/the-ne-c">The new C++</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/18778436817/whither-programming-language-research">Whither programming language research?</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/23994485648/operations-should-be-in-the-computer-science-curriculum">Operations should be in the computer science curriculum</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/21508149060/church-numerals-in-python">Church numerals in Python</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/20335710829/code-revie-jus-do-it">Code review. Just do it.</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/1243047026/coding-blind">Coding blind</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/19853306218/computational-thinking">Computational thinking</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/23430363068/executable-thought">Executable Thought</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/33877831082/ho-did-software-ge-so-reliable">How did software get so reliable?</a></li>
+<li><a href="http://blog.vivekhaldar.com/post/25925740365/social-engineering-for-programming-languages">Social Engineering for Programming Languages</a></li>
+
+        
+        </ul>
+            
+          </div> <!-- /side -->
+		</div> <!-- /content -->
+	
 	
 </body>
 </html>
